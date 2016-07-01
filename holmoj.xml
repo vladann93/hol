@@ -2,7 +2,7 @@
 	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
 	<MoveTo Nav="Fly" X="8459.382" Y="319.1315" Z="906.575" />
 
-	<CustomBehavior File="InteractWith" MobId="29964" MobState="Alive" WaitTime="1000" X="8387.493" Y="-387.4584" Z="903.1187" />
+	<CustomBehavior File="InteractWith" MobId="29964" MobState="Alive" WaitTime="1000" X="8489.99" Y="-348.22" Z="940.80" />
 	<CustomBehavior File="RunCode" >
 	<![CDATA[
 		foreach (WoWItem i in Me.BagItems)
