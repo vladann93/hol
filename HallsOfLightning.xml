@@ -45,6 +45,7 @@
 			</CustomBehavior> -->
 		<ClearMailbox />
 	<MoveTo Nav="Fly" X="9119.618" Y="-1276.496" Z="1065.042" />
+	<CustomBehavior File="RunCode" Code="SpellManager.Cast(789);" />
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	<MoveTo Nav="Run" X="8607.005" Y="-458.6642" Z="1092.152" />
 	</If>
