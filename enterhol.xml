@@ -4,7 +4,7 @@
 	</If>
 	<CustomBehavior File="RunCode" Code="Me.GetAuraById(789).TryCancelAura();" />
 	
-	<MoveTo Nav="Run" X="9083" Y="-1255" Z="1092" />
+	<MoveTo Nav="Run" X="9113.729" Y="-1272.497" Z="1064.105" />
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	<CustomBehavior File="MyCTM" X="9190.415" Y="-1395.566" Z="1110.215" TerminateWhen="Me.MapId == 602" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
