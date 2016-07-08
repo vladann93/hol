@@ -2,7 +2,7 @@
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
 		<CustomBehavior File="FlyTo" X="9114" Y="-1273" Z="1074" />
 	</If>
-	<CustomBehavior File="RunCode" Code="SpellManager.Cast(789);" />
+	<CustomBehavior File="RunCode" Code="Me.GetAuraById(789).TryCancelAura();" />
 	
 	<MoveTo Nav="Run" X="9083" Y="-1255" Z="1092" />
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
