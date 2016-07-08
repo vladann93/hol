@@ -1,10 +1,10 @@
 <If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
-		<CustomBehavior File="FlyTo" X="9113.729" Y="-1272.497" Z="1064.105" />
+		<CustomBehavior File="FlyTo" X="9107.32" Y="-1287.05" Z="1140.74" />
 	</If>
 	<CustomBehavior File="RunCode" Code="Me.GetAuraById(789).TryCancelAura();" />
 	
-	<MoveTo Nav="Run" X="9052.287" Y="-1275.413" Z="1059.027" />
+	<MoveTo Nav="Run" X="9107.32" Y="-1287.05" Z="1140.74" />
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	<CustomBehavior File="MyCTM" X="9190.415" Y="-1395.566" Z="1110.215" TerminateWhen="Me.MapId == 602" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
