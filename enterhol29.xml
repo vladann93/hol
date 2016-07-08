@@ -6,7 +6,7 @@
 		<CustomBehavior File="FlyTo" X="9078.439" Y="-1235.777" Z="1058.399"     />
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 		
-		<CustomBehavior File="FlyTo" X="9118.489" Y="-1294.726" Z="1062.889"      />
+		<RunTo X="9118.489" Y="-1294.726" Z="1062.889"      />
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(1850);" />
 		
 		
