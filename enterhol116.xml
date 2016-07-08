@@ -1,7 +1,9 @@
 <If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
 	
-	<CustomBehavior File="FlyTo" X="9067.279" Y="-1219.704" Z="1058.399"    />
+		<CustomBehavior File="FlyTo" X="9067.279" Y="-1219.704" Z="1058.399"    />
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(783);" />
+		<CustomBehavior File="FlyTo" X="9073.227" Y="-1228.273" Z="1058.399"    />
+		<CustomBehavior File="RunCode" Code="SpellManager.Cast(1850 />
 		<CustomBehavior File="FlyTo" X="9078.439" Y="-1235.777" Z="1058.399"     />
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	
