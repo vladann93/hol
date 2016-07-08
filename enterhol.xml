@@ -3,7 +3,7 @@
 		<CustomBehavior File="FlyTo" X="9119.618" Y="-1276.496" Z="1065.042" />
 	</If>
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(789);" />
-	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
+	
 	<RunTo X="8607.005" Y="-458.6642" Z="1092.152" />
 	<CustomBehavior File="MyCTM" X="9190.415" Y="-1395.566" Z="1110.215" TerminateWhen="Me.MapId == 602" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
