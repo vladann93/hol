@@ -85,6 +85,15 @@
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: Attempting use of speed buffs.&quot;);" />
 		<CustomBehavior File="Misc\RunLua" Lua="TargetNearestEnemy(); CastSpellByID(20271);" />
 	</CustomBehavior>
+	
+	<If Condition="Me.Class == WoWClass.Druid" > <!-- deaths advance -->
+	<CustomBehavior File="Hooks\DoWhen" ActivityName="MoveSpeedHook" LogExecution="false" AllowUseDuringCombat="True" UseWhen="(Settings.Instance.UseSpeedBuffs &amp;&amp; Me.IsMoving &amp;&amp; Me.IsInInstance &amp;&amp; Me.IsAlive) &amp;&amp; (SpellManager.CanCast(77764))" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: Attempting use of speed buffs.&quot;);" />
+		<CustomBehavior File="RunCode" Code="SpellManager.Cast(77764);" />
+	</CustomBehavior>
+	
+	
+	
 </If>
 <!-- END Speed Buffs -->
 
