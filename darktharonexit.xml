@@ -1,0 +1,17 @@
+<If Condition="Me.MapId == 600" >
+	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots &amp;&amp; !(Me.KnowsSpell(61425) || Me.KnowsSpell(61447) || Me.KnowsSpell(122708))" >
+		<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Skipping wait since we're going to the vendor.&quot;);" />
+		<Else>
+			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(330));" />
+		</Else>
+	</If>
+	<CustomBehavior File="RunCode" Code="AzyulGPHTracker.LogGPH();" />
+	<CustomBehavior File="MyCTM" X="-525.4516" Y="-474.7986" Z="10.98291" TerminateWhen="Me.MapId != 600" />
+	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="!Me.IsInInstance" />
+	<CustomBehavior File="Misc\RunLua" Lua="ResetInstances();" />
+	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots" > <!-- Extra code to navigate out of the no-mount-zone for Drak'tharon -->
+		<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
+		<RunTo X="4892.737" Y="-2032.301" Z="248.31" />
+	</If>
+
+</If>
