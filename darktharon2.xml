@@ -12,7 +12,6 @@
 
     <DisableBehavior Name="Combat" />
 	    <RunTo X="-537.1692" Y="-578.1137" Z="1.9140"  />
-	    <RunTo X="-544.5040" Y="-579.6451" Z="1.0251"  />
 	    <RunTo X="-517.4600" Y="-599.9984" Z="1.0250"  />
 	    <RunTo X="-483.5866" Y="-606.0858" Z="1.4814"  />
 	    <RunTo X="-469.5986" Y="-599.4240" Z="1.6413"  />
@@ -40,8 +39,7 @@
     <MoveTo X="-338.6151" Y="-720.4265" Z="28.57711" />
     <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: This boss isn't worth it.&quot;);" />
    <CustomBehavior File="MyCTM" X="-379.9471" Y="-738.1785" Z="27.2536" />
-    <CustomBehavior File="WaitTimer" WaitTime="90000" />
-    <CustomBehavior File="MyCTM" X="-393.7734" Y="-721.4113" Z="28.59065" />
+    <CustomBehavior File="WaitTimer" WaitTime="80000" />
     <CustomBehavior File="MyCTM" X="-409.0117" Y="-729.8685" Z="28.58064" />
 
     <MoveTo X="-424.5214" Y="-695.5582" Z="28.57602" />
