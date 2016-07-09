@@ -42,10 +42,10 @@
     
     <CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
     <CustomBehavior File="MyCTM" X="-409.0117" Y="-729.8685" Z="28.58064" />
-
+<DisableBehavior Name="Combat" />
     <MoveTo X="-424.5214" Y="-695.5582" Z="28.57602" />
 
-    <DisableBehavior Name="Combat" />
+    
 		<RunTo X="-402.5685" Y="-670.2057" Z="26.64206" />
 		<RunTo X="-454.369" Y="-652.0738" Z="28.42467" />
 		<RunTo X="-501.23" Y="-651.8302" Z="30.22856" />
