@@ -43,7 +43,9 @@
     <CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
     <MoveTo X="-409.0117" Y="-729.8685" Z="28.58064" />
 <DisableBehavior Name="Combat" />
-    
+    <MoveTo X="-378.7008" Y="-739.6389" Z="27.29878" />
+    <CustomBehavior File="WaitTimer" WaitTime="750" />
+    <MoveTo X="-424.5214" Y="-695.5582" Z="28.57602" />
 
     
 		<RunTo X="-402.5685" Y="-670.2057" Z="26.64206" />
