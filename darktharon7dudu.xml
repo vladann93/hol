@@ -40,7 +40,7 @@
     <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: This boss isn't worth it.&quot;);" />
    <CustomBehavior File="MyCTM" X="-371.1795" Y="-737.9334" Z="27.70728" />
     
-    <CustomBehavior File="RunCode" Code="SpellManager.Cast(77758);" />
+    <CustomBehavior File="RunCode" Code="SpellManager.Cast(106832);" />
     <CustomBehavior File="MyCTM" X="-409.0117" Y="-729.8685" Z="28.58064" />
 <DisableBehavior Name="Combat" />
     <MoveTo X="-378.7008" Y="-739.6389" Z="27.29878" />
