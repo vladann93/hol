@@ -39,8 +39,8 @@
     <RunTo X="-292.9587" Y="-716.4481" Z="27.53353" />
     <MoveTo X="-338.6151" Y="-720.4265" Z="28.57711" />
     <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: This boss isn't worth it.&quot;);" />
-   <CustomBehavior File="MyCTM" X="-378.9315" Y="-731.2266" Z="27.62987" />
-    <CustomBehavior File="WaitTimer" WaitTime="750" />
+   <CustomBehavior File="MyCTM" X="-379.9471" Y="-738.1785" Z="27.2536" />
+    <CustomBehavior File="WaitTimer" WaitTime="90000" />
     <CustomBehavior File="MyCTM" X="-393.7734" Y="-721.4113" Z="28.59065" />
     <CustomBehavior File="MyCTM" X="-409.0117" Y="-729.8685" Z="28.58064" />
 
