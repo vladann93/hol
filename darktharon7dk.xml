@@ -41,7 +41,7 @@
    <CustomBehavior File="MyCTM" X="-371.1795" Y="-737.9334" Z="27.70728" />
     
     <CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
-    <CustomBehavior File="MyCTM" X="-409.0117" Y="-729.8685" Z="28.58064" />
+    <MoveTo X="-409.0117" Y="-729.8685" Z="28.58064" />
 <DisableBehavior Name="Combat" />
     <MoveTo X="-378.7008" Y="-739.6389" Z="27.29878" />
     <CustomBehavior File="WaitTimer" WaitTime="750" />
