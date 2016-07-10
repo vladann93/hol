@@ -5,7 +5,7 @@
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
 	
 	
-		<CustomBehavior File="FlyTo" X="9187.587" Y="-1388.393" Z="1161.903"    />
+		<CustomBehavior File="FlyTo" X="9186.587" Y="-1386.393" Z="1161.903"    />
 
 		<CustomBehavior File="RunMacro" Macro="/dismount" />
 		
