@@ -18,9 +18,9 @@
 	]]>
 	</CustomBehavior>
 
-			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="3000" />
+			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="35000" />
 			<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
-<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="35000" CollectionDistance="1000" />
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(370));" />
 
