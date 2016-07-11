@@ -4,7 +4,7 @@
 <RunTo X="2397.3" Y="-5639.756" Z="377.0778" />
 <RunTo X="2389.956" Y="-5641.195" Z="377.1125" />
 <RunTo X="2440.567" Y="-5633.242" Z="420.644" />
-
+<RunTo X="2442.063" Y="-5630.274" Z="420.6162"  />
 	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
 	<CustomBehavior File="RunCode" >
 	<![CDATA[
@@ -19,6 +19,8 @@
 	</CustomBehavior>
 
 			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="3000" />
+			<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(370));" />
 
