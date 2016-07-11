@@ -22,7 +22,7 @@
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(370));" />
 
-<CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
 <CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
 
 	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.MailMinBagSlots" >
