@@ -63,9 +63,13 @@
 
 	<If Condition="Me.IsAlliance" >
 		
-		<If Condition="Me.ZoneId == 23" > <!-- the ebon hold -->
-			<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" WaitTime="28000" />
-			<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
+		<If Condition="SpellManager.CanCast(50977)" > <!-- Checks if we're a dk and spell is castable -->
+			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a Mage! Teleporting to hol.&quot;);" />
+			<CustomBehavior File="ForcedDismount" />
+			<While Condition="!HasArrivedNorthrend()" >
+				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);" WaitTime="500" />
+				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
+			</While>
 		</If>
 
 
