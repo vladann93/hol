@@ -1,0 +1,55 @@
+<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots" >
+	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
+	<RunTo X="2401.644" Y="-5645.555" Z="377.0822" />
+<RunTo X="2397.3" Y="-5639.756" Z="377.0778" />
+<RunTo X="2389.956" Y="-5641.195" Z="377.1125" />
+<RunTo X="2440.567" Y="-5633.242" Z="420.644" />
+
+	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
+	<CustomBehavior File="RunCode" >
+	<![CDATA[
+		foreach (WoWItem i in Me.BagItems)
+		{
+			if (i != null && i.Entry != 6948 &&	!(Contains(Settings.Instance.ProtectedItemNames, i.Quality.ToString()) || Contains(Settings.Instance.ProtectedItemNames, i.Name) || Contains(Settings.Instance.ProtectedItemNames, i.Entry.ToString())) && !(Contains(Settings.Instance.DepositItemNames, i.Name) || Contains(Settings.Instance.DepositItemNames, i.Entry.ToString())) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+				i.UseContainerItem();
+				StyxWoW.SleepForLagDuration();
+		}
+		Lua.DoString("RepairAllItems();");
+	]]>
+	</CustomBehavior>
+
+			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="3000" />
+			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
+			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(370));" />
+
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(50842);" />
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
+
+	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.MailMinBagSlots" >
+		<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.Orange, &quot;You're still under 20 bagslots after selling. Moving to mail.&quot;);" />
+		<MoveTo Nav="Fly" X="8443.004" Y="-329.3138" Z="906.6082" />
+		<SetMailbox>
+			<Mailboxes>
+				<Mailbox X="8440.736" Y="-329.4271" Z="906.5062" />
+			</Mailboxes>
+		</SetMailbox>
+		<CustomBehavior File="ForceSetVendor" DoMail="True" />
+		<MoveTo  X="8389.097" Y="-387.6377" Z="903.0562" />
+		<!-- Backup Vendor if first fails.
+		<CustomBehavior File="InteractWith" MobId="32477" MobState="Alive" WaitTime="1000" X="8893.612" Y="-1361.069" Z="1033.906" />
+		
+			<CustomBehavior File="RunCode" >
+			<![CDATA[
+				foreach (WoWItem i in Me.BagItems)
+				{
+					if (i != null && i.Entry != 6948 && !Contains(Settings.Instance.ProtectedItemNames, i.Name) && !Contains(Settings.Instance.DepositItemNames, i.Name) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+						i.UseContainerItem();
+						StyxWoW.SleepForLagDuration();
+				}
+				Lua.DoString("RepairAllItems();");
+			]]>
+			</CustomBehavior> -->
+		<ClearMailbox />
+		<MoveTo Nav="Fly" X="8607.005" Y="-458.6642" Z="1092.152" />
+	</If>
+</If>
