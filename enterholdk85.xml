@@ -5,9 +5,8 @@
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
 	
 	
-		<CustomBehavior File="FlyTo" X="9186.587" Y="-1386.393" Z="1161.903"    />
-
-		<CustomBehavior File="RunMacro" Macro="/dismount" />
+		<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" WaitTime="28000" />
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
 		
 		
 	
