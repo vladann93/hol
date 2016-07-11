@@ -63,7 +63,7 @@
 
 	<If Condition="Me.IsAlliance" >
 		
-		<If Condition="Me.ZoneId == 23" > <!-- Checks if we're a dk and spell is castable -->
+		<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk and spell is castable -->
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!HasArrivedNorthrend()" >
@@ -234,7 +234,7 @@
 
 	<If Condition="Me.IsHorde" >
 		
-		<If Condition="SpellManager.CanCast(50977)" > <!-- Checks if we're a dk and spell is castable -->
+		<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk and spell is castable -->
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!HasArrivedNorthrend()" >
