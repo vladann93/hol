@@ -9,4 +9,5 @@
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
 <CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="10000" />
 	<CustomBehavior File="Misc\RunLua" Lua="ResetInstances();" />
+	 <RunTo X="2352.666" Y="-5690.281" Z="382.2388" />
 </If>
