@@ -70,6 +70,7 @@
 
 
 	<DisableBehavior Name="Combat" />
+	<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
 		<RunTo X="1252.129" Y="-26.77266" Z="33.50569" />
 		<RunTo X="1269.707" Y="104.146" Z="33.50554" /> //
 		<RunTo X="1293.428" Y="91.48701" Z="36.04799" />//
