@@ -66,7 +66,7 @@
 		<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk and spell is castable -->
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!HasArrivedNorthrend()" || InPriorityLocationNorthrend()) >
+			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
 				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
 			</While>
