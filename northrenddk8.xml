@@ -66,7 +66,7 @@
 		<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk and spell is castable -->
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
-			<While Condition="!HasArrivedNorthrend()" >
+			<While Condition="!HasArrivedNorthrend()" || InPriorityLocationNorthrend()) >
 				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);" WaitTime="500" />
 				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
 			</While>
@@ -87,7 +87,7 @@
 			</While>
 		</If>
 		<!-- /// Item Teleportation Logic.   Teleport to area that has portals (Shrine/etc) or teleport to destination /// -->
-		<If Condition="!HasArrivedNorthrend()  >
+		<If Condition="!HasArrivedNorthrend() &amp;&amp; HearthIsPriorityLocationNorthrend() &amp;&amp; !InPriorityLocationNorthrend() &amp;&amp; HasHearthNorthrend()" >
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;Hearthing would be faster to reach our destination, attempting to Hearth!&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
