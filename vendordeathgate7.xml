@@ -2,7 +2,7 @@
 	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
 	<RunTo X="2401.644" Y="-5645.555" Z="377.0822" />
 	<RunTo X="2397.3" Y="-5639.756" Z="377.0778" />
-	<RunTo X="2389.956" Y="-5641.195" Z="377.1125" WaitTime="1500" />
+	<RunTo X="2389.956" Y="-5641.195" Z="377.1125" WaitTime="2500" />
 	<RunTo X="2417.455" Y="-5623.333" Z="420.6457"  />
 	<RunTo X="2447.756" Y="-5629.642" Z="420.4933"   />
 	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
