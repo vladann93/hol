@@ -1,0 +1,13 @@
+<If Condition="Me.MapId == 602" >
+	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots &amp;&amp; !(Me.KnowsSpell(61425) || Me.KnowsSpell(61447) || Me.KnowsSpell(122708))" >
+		<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Skipping wait since we're going to the vendor.&quot;);" />
+		<Else>
+			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(258));" />
+		</Else>
+	</If>
+	<CustomBehavior File="RunCode" Code="AzyulGPHTracker.LogGPH();" />
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="10000" />
+	<CustomBehavior File="Misc\RunLua" Lua="ResetInstances();" />
+	 <RunTo X="2333.441" Y="-5663.009" Z="382.2404"    />
+</If>
