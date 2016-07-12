@@ -67,7 +67,7 @@
 	<RunTo X="1183.806" Y="50.22289" Z="60.72858" /> <!-- Navigate shortcut 1 -->
 	<RunTo X="1243.369" Y="32.99341" Z="58.21875" /> <!-- Navigate shortcut 2 -->
 	<CustomBehavior File="MyCTM" X="1265.287" Y="33.88977" Z="33.50571" />
-
+<CustomBehavior File="WaitTimer" WaitTime="7000" />
 
 	<DisableBehavior Name="Combat" />
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
