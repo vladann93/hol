@@ -64,7 +64,7 @@
 	<If Condition="Me.IsAlliance" >
 		
 		<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk in ebon hold and spell is castable NORTH -->
-			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
+			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol NORTH.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
 				<CustomBehavior File="WaitTimer" WaitTime="24000" />
