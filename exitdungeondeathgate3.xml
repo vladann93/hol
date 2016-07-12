@@ -6,7 +6,7 @@
 		</Else>
 	</If>
 	<CustomBehavior File="RunCode" Code="AzyulGPHTracker.LogGPH();" />
-<CustomBehavior File="RunCode" Code="SpellManager.Cast(50977);" />
-<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
+
+<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="10000" />
 	<CustomBehavior File="Misc\RunLua" Lua="ResetInstances();" />
 </If>
