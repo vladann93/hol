@@ -6,7 +6,7 @@
 			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
 				<CustomBehavior File="WaitTimer" WaitTime="24000" />
 				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);"  WaitTime="1000"  />
-				<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="1000" />
+				<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="3" />
 				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
 			</While>
 		</If>
