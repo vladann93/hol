@@ -1,6 +1,13 @@
 <If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
 	
-	
+	<If Condition="Me.ZoneId == 139" > <!-- Checks if we're a dk in ebon hold and spell is castable -->
+			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol.&quot;);" />
+			<CustomBehavior File="ForcedDismount" />
+			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
+				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);" WaitTime="500" />
+				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
+			</While>
+		</If>
 	
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
 	
