@@ -26,12 +26,15 @@
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(300));" />
 
-		<CustomBehavior File="WaitTimer" WaitTime="10000" />
+		
 
 	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots" >
 	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
-
-	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
+	
+	<RunTo X="2421.174" Y="-5593.192" Z="420.5326"  />
+	
+	
+	<CustomBehavior File="InteractWith" MobId="28512" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
 	<CustomBehavior File="RunCode" >
 	<![CDATA[
 		foreach (WoWItem i in Me.BagItems)
