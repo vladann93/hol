@@ -34,7 +34,7 @@
 		<RunTo X="1177.321" Y="-222.0205" Z="52.55298" /> <!-- No mobs pulled here. -->
 		<RunTo X="1174.103" Y="-261.2543" Z="52.35262" />
 		<RunTo X="1111.6" Y="-263.8185" Z="56.87343" /> //
-	<CustomBehavior File="WaitTimer" WaitTime="4000" />
+	
 	<EnableBehavior Name="Combat" />
 
 	<RunTo X="1099.243" Y="-262.1025" Z="56.87389" /> <!-- No mobs pulled here. -->
