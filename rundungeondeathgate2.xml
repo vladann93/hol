@@ -34,10 +34,11 @@
 		<RunTo X="1177.321" Y="-222.0205" Z="52.55298" /> <!-- No mobs pulled here. -->
 		<RunTo X="1174.103" Y="-261.2543" Z="52.35262" />
 		<RunTo X="1111.6" Y="-263.8185" Z="56.87343" /> //
-	<EnableBehavior Name="Combat" />
+	
 
 	<RunTo X="1099.243" Y="-262.1025" Z="56.87389" /> <!-- No mobs pulled here. -->
 	<CustomBehavior File="InteractWith" MobId="28546" MobState="Alive" WaitForNpcs="false" X="1084.386" Y="-261.6173" Z="61.1981" /> <!-- Pull Ionar -->
+	<EnableBehavior Name="Combat" />
 	<RunTo X="1074.463" Y="-232.8099" Z="61.19876" /> <!-- No mobs pulled here. -->
 
 
