@@ -87,7 +87,7 @@
 			</While>
 		</If>
 		<!-- /// Item Teleportation Logic.   Teleport to area that has portals (Shrine/etc) or teleport to destination /// -->
-		<If Condition="!HasArrivedNorthrend() &amp;&amp; HearthIsPriorityLocationNorthrend() &amp;&amp; !InPriorityLocationNorthrend() &amp;&amp; HasHearthNorthrend()" >
+		<If Condition="!HasArrivedNorthrend()  >
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;Hearthing would be faster to reach our destination, attempting to Hearth!&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
