@@ -10,7 +10,9 @@
 				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
 			</While>
 		</If>
-	
+	<Else>
+					
+				
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1095.251)) &gt;= 30" >
 	
 	
@@ -18,7 +20,7 @@
  -
  -		<CustomBehavior File="RunMacro" Macro="/dismount" />
 		
-		
+		</Else>
 	
 	
 	
