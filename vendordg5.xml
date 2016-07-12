@@ -1,0 +1,71 @@
+<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots" >
+	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
+	<RunTo X="2401.644" Y="-5645.555" Z="377.0822" />
+	<RunTo X="2397.3" Y="-5639.756" Z="377.0778" />
+	<RunTo X="2389.956" Y="-5641.195" Z="377.1125"  />
+	<CustomBehavior File="WaitTimer" WaitTime="2000" />
+	<RunTo X="2417.455" Y="-5623.333" Z="420.6457"  />
+	<CustomBehavior File="WaitTimer" WaitTime="500" />
+	<RunTo X="2447.756" Y="-5629.642" Z="420.4933"   />
+	<CustomBehavior File="WaitTimer" WaitTime="500" />
+	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
+	<CustomBehavior File="RunCode" >
+	<![CDATA[
+		foreach (WoWItem i in Me.BagItems)
+		{
+			if (i != null && i.Entry != 6948 &&	!(Contains(Settings.Instance.ProtectedItemNames, i.Quality.ToString()) || Contains(Settings.Instance.ProtectedItemNames, i.Name) || Contains(Settings.Instance.ProtectedItemNames, i.Entry.ToString())) && !(Contains(Settings.Instance.DepositItemNames, i.Name) || Contains(Settings.Instance.DepositItemNames, i.Entry.ToString())) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+				i.UseContainerItem();
+				StyxWoW.SleepForLagDuration();
+		}
+		Lua.DoString("RepairAllItems();");
+	]]>
+	</CustomBehavior>
+
+			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1000" />
+			<RunTo X="2456.314" Y="-5570.591" Z="415.6632"     />
+			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
+			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(300));" />
+
+	
+
+	<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots" >
+	<CustomBehavior File="RunCode" Code="Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: &quot;, System.Windows.Media.Colors.LightGreen, &quot;Moving to Sell, Repair and Mail.&quot;);" />
+	
+	
+	
+	
+	<CustomBehavior File="InteractWith" MobId="28500" MobState="Alive" WaitTime="1000" CollectionDistance="1000" />
+	<CustomBehavior File="RunCode" >
+	<![CDATA[
+		foreach (WoWItem i in Me.BagItems)
+		{
+			if (i != null && i.Entry != 6948 &&	!(Contains(Settings.Instance.ProtectedItemNames, i.Quality.ToString()) || Contains(Settings.Instance.ProtectedItemNames, i.Name) || Contains(Settings.Instance.ProtectedItemNames, i.Entry.ToString())) && !(Contains(Settings.Instance.DepositItemNames, i.Name) || Contains(Settings.Instance.DepositItemNames, i.Entry.ToString())) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+				i.UseContainerItem();
+				StyxWoW.SleepForLagDuration();
+		}
+		Lua.DoString("RepairAllItems();");
+	]]>
+	</CustomBehavior>
+
+			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1000" />
+			<RunTo X="2456.314" Y="-5570.591" Z="415.6632"     />
+			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
+			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(300));" />
+		<!-- Backup Vendor if first fails.
+		<CustomBehavior File="InteractWith" MobId="32477" MobState="Alive" WaitTime="1000" X="8893.612" Y="-1361.069" Z="1033.906" />
+		
+			<CustomBehavior File="RunCode" >
+			<![CDATA[
+				foreach (WoWItem i in Me.BagItems)
+				{
+					if (i != null && i.Entry != 6948 && !Contains(Settings.Instance.ProtectedItemNames, i.Name) && !Contains(Settings.Instance.DepositItemNames, i.Name) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+						i.UseContainerItem();
+						StyxWoW.SleepForLagDuration();
+				}
+				Lua.DoString("RepairAllItems();");
+			]]>
+			</CustomBehavior> -->
+		<ClearMailbox />
+		
+	</If>
+</If>
