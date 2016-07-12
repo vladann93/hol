@@ -36,6 +36,7 @@
 	{
 		if (HasItem(64488) && !WoWSpell.FromId(94719).Cooldown) return true; // Innkeeper's Daughter
 		if (HasItem(6948) && !WoWSpell.FromId(8690).Cooldown) return true; // Hearthstone
+		if (HasItem(50977) && !WoWSpell.FromId(50977).Cooldown) return true; // deaths gate
 		if (SpellManager.CanCast(556)) return true; // Astral Recall
 		return false;
 	}
@@ -67,7 +68,7 @@
 			<CustomBehavior File="RunCode" Code="NorthrendLog(Colors.LightGreen, &quot;We're a dk! Teleporting to hol NORTH.&quot;);" />
 			<CustomBehavior File="ForcedDismount" />
 			<While Condition="!(HasArrivedNorthrend() || InPriorityLocationNorthrend())" >
-				<CustomBehavior File="RunCode" Code="await Coroutine.Wait(60000) />
+				<CustomBehavior File="RunCode" Code="await Coroutine.Wait(60000, () => HearthIsReadyNorthrend() || InPriorityLocationNorthrend());" />
 				<CustomBehavior File="Misc\RunLua" Lua="CastSpellByID(50977);"  WaitTime="1000"  />
 				<CustomBehavior File="InteractWith" MobId="190942"  WaitTime="1000" CollectionDistance="11" />
 				<CustomBehavior File="WaitTimer" WaitTime="50000" TerminateWhen="HasArrivedNorthrend() || CastingInterruptedKalimdor()" />
