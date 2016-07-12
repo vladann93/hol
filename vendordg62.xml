@@ -22,7 +22,7 @@
 	</CustomBehavior>
 
 			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1000" />
-			<RunTo X="2443.153" Y="-5542.75" Z="421.7498"     />
+			<RunTo  X="2452.006" Y="-5546.124" Z="420.6445"    />
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(300));" />
 
@@ -48,7 +48,7 @@
 	</CustomBehavior>
 
 			<CustomBehavior File="Misc\RunLua" Lua="JumpOrAscendStart()" WaitTime="1000" />
-			<RunTo X="2443.153" Y="-5542.75" Z="421.7498"     />
+			<RunTo X="2452.006" Y="-5546.124" Z="420.6445"     />
 			<CustomBehavior File="Misc\RunLua" Lua="AscendStop()" />
 			<CustomBehavior File="RunCode" Code="await InstanceTimer.WaitForTimeAsync(TimeSpan.FromSeconds(300));" />
 		<!-- Backup Vendor if first fails.
